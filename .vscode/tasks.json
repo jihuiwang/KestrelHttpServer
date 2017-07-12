@@ -25,7 +25,7 @@
     },
     {
       "taskName": "Compile: solution",
-      "isBuildCommand": true,
+      "group": "build",
       "args": [
         "build",
         "${workspaceRoot}/KestrelHttpServer.sln"
@@ -55,7 +55,7 @@
         "test"
       ],
       "problemMatcher": "$msCompile",
-      "isTestCommand": true
+      "group": "test"
     },
     {
       "taskName": "Compile: CodeGenerator",
@@ -101,7 +101,7 @@
         "Release"
       ],
       "options": {
-        "cwd": "${workspaceRoot}/test/Microsoft.AspNetCore.Server.Kestrel.Performance/"
+        "cwd": "${workspaceRoot}/test/Kestrel.Performance/"
       }
     }
   ]
