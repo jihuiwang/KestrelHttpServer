@@ -1,7 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\build\common.props" />
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <OutputType>Exe</OutputType>
@@ -10,17 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Microsoft.AspNetCore.Server.Kestrel.Core\Microsoft.AspNetCore.Server.Kestrel.Core.csproj" />
+    <ProjectReference Include="..\..\src\Kestrel.Core\Kestrel.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="$(AspNetCoreVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="$(AspNetCoreVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" />
   </ItemGroup>
 
   <PropertyGroup>
-    <StartWorkingDirectory>$(MSBuildThisFileDirectory)..\..\src\Microsoft.AspNetCore.Server.Kestrel.Core</StartWorkingDirectory>
-    <StartArguments>Internal\Http\FrameHeaders.Generated.cs Internal\Http\Frame.Generated.cs Internal\Infrastructure\HttpUtilities.Generated.cs</StartArguments>
+    <StartWorkingDirectory>$(MSBuildThisFileDirectory)..\..\src\Kestrel.Core</StartWorkingDirectory>
+    <StartArguments>Internal/Http/FrameHeaders.Generated.cs Internal/Http/Frame.Generated.cs Internal/Http2/Http2Stream.Generated.cs Internal/Infrastructure/HttpUtilities.Generated.cs</StartArguments>
   </PropertyGroup>
 
 </Project>
